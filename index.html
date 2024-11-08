@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Virtual Guitar</title>
+
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+}
+
+.guitar-img {
+    width: 300px; /* Adjust based on your image size */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.guitar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Adjust to position strings correctly */
+}
+
+.string {
+    width: 200px;
+    height: 20px;
+    background-color: #8B4513;
+    margin: 5px 0;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.string:hover {
+    background-color: #ffe100;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="guitar.png" alt="Guitar" class="guitar">
+        <div class="guitar">
+            <div class="string" data-sound="E">E</div>
+            <div class="string" data-sound="A">A</div>
+            <div class="string" data-sound="D">D</div>
+            <div class="string" data-sound="G">G</div>
+            <div class="string" data-sound="B">B</div>
+            <div class="string" data-sound="e">e</div>
+        </div>
+
+        
+        <audio id="guitar-sound" src="" ></audio>
+        <audio id="tabla-sound" src=""></audio>
+        <audio id="drum-sound" src=""></audio>
+
+        <audio id="flute-sound" src=""></audio>
+        <audio id="xylophone-sound" src=""></audio>
+        <audio id="piano-sound" src=""></audio>
+
+
+     
+
+    </div>
+    <script >
+       function guitar() {
+    document.getElementById('guitar-sound').play();
+}
+
+function tabla() {
+    document.getElementById('tabla-sound').play();
+}
+
+function drum() {
+    document.getElementById('drum-sound').play();
+}
+
+function flute() {
+    document.getElementById('flute-sound').play();
+}
+
+function xylophone() {
+    document.getElementById('xylophone-sound').play();
+}
+
+function piano() {
+    document.getElementById('piano-sound').play();
+}
+
+
+    </script>
+</body>
+</html>
